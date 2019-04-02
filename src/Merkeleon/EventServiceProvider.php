@@ -15,7 +15,7 @@ class EventServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../../config/transactional-events.php',
+            __DIR__ . '/../config/transactional-events.php',
             'transactional-events'
         );
 
@@ -45,7 +45,7 @@ class EventServiceProvider extends ServiceProvider
         $configPath = $this->app->basePath().'/config';
 
         $this->publishes([
-            __DIR__ . '/../../config/transactional-events.php' => $configPath.'/transactional-events.php',
+            __DIR__ . '/../config/transactional-events.php' => $configPath.'/transactional-events.php',
         ]);
     }
 }
