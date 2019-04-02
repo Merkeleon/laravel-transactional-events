@@ -1,0 +1,37 @@
+{
+    "name": "merkeleon/laravel-transactional-events",
+    "description": "Transactional layer for Laravel Event Dispatcher",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "illuminate/database": "~5.8.0",
+        "illuminate/events": "~5.8.0",
+        "illuminate/support": "~5.8.0"
+    },
+    "authors": [
+        {
+            "name": "Francisco Neves",
+            "email": "hi@francisconeves.me"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Merkeleon\\Events\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Merkeleon\\Events\\EventServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.8.0"
+    }
+}

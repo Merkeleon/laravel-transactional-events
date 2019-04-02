@@ -1,0 +1,23 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+cache:
+  directories:
+    - ./vendor
+    - $HOME/.composer/cache
+
+env:
+  - LARAVEL_VERSION=5.8.* TESTBENCH_VERSION=3.8.*
+
+before_script:
+  - composer self-update
+  - composer require "laravel/framework:${LARAVEL_VERSION}" "orchestra/testbench:${TESTBENCH_VERSION}" --no-update
+  - if [ "$PHPUNIT_VERSION" != "" ]; then composer require "phpunit/phpunit:${PHPUNIT_VERSION}" --no-update; fi;
+  - composer update
+  - mkdir -p build/logs
+
+script: vendor/bin/phpunit
