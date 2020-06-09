@@ -4,7 +4,7 @@ namespace Merkeleon\Events;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\ConnectionInterface;
-use Neves\Events\Contracts\TransactionalEvent;
+use Merkeleon\Events\Contracts\TransactionalEvent;
 use Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Database\Events\TransactionBeginning;
 use Illuminate\Database\Events\TransactionCommitted;
