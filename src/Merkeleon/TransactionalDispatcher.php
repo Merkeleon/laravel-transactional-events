@@ -291,7 +291,7 @@ class TransactionalDispatcher implements DispatcherContract
      * @param  mixed $listener
      * @return void
      */
-    public function listen($events, $listener)
+    public function listen($events, $listener = NULL)
     {
         $this->dispatcher->listen($events, $listener);
     }
